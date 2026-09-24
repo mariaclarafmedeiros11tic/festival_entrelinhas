@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #071a3a;
+    --azul-claro: #102f60;
+    --preto: #05070b;
+    --branco: #f7f9fc;
+    --prata: #c7ced9;
+    --cinza: #9ca7b8;
+    --borda: rgba(255,255,255,0.15);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    width: 100%;
+    background: rgba(5, 7, 11, 0.95);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 80px;
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--prata);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    font-size: 14px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: var(--prata);
+}
+
+/* ================= GERAL ================= */
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Archivo Black', sans-serif;
+    line-height: 1.05;
+}
+
+h1 {
+    font-size: clamp(55px, 10vw, 120px);
+    letter-spacing: -3px;
+}
+
+h2 {
+    font-size: clamp(38px, 6vw, 70px);
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: var(--cinza);
+}
+
+.texto-destaque {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+.kicker {
+    color: var(--prata);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+/* ================= BOTÕES ================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    color: var(--preto);
+}
+
+.btn-branco {
+    background: white;
+    color: var(--preto);
+}
+
+/* ================= HOME ================= */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: flex-end;
+
+    background:
+        linear-gradient(90deg, rgba(0,0,0,.85), rgba(7,26,58,.25)),
+        radial-gradient(circle at 75% 25%, #234f91, transparent 35%),
+        linear-gradient(135deg, #02040a, #071a3a 60%, #080b11);
+}
+
+.hero-conteudo {
+    width: min(1150px, 90%);
+    margin: auto;
+    padding: 100px 0 80px;
+}
+
+.hero h1 {
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--prata);
+}
+
+.hero-descricao {
+    max-width: 680px;
+    font-size: 21px;
+}
+
+.informacoes-hero {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.tag {
+    border: 1px solid var(--borda);
+    padding: 8px 14px;
+    color: var(--prata);
+}
+
+/* ================= CARDS ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    border: 1px solid var(--borda);
+    background: rgba(255,255,255,.03);
+    padding: 30px;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,255,255,.4);
+}
+
+.numero {
+    color: var(--prata);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* ================= ARTISTAS ================= */
+
+.artistas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.artista {
+    border: 1px solid var(--borda);
+    overflow: hidden;
+    background: #090c13;
+}
+
+.artista-imagem {
+    height: 330px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at 70% 25%, #c7ced9, transparent 15%),
+        linear-gradient(145deg, #03050a, #0c2e62 55%, #07101f);
+}
+
+.artista:nth-child(2) .artista-imagem {
+    background:
+        linear-gradient(135deg, #020306, #123a78, #9ca7b8);
+}
+
+.artista:nth-child(3) .artista-imagem {
+    background:
+        radial-gradient(circle, #c7ced9, #173d77 30%, #02040a 70%);
+}
+
+.artista:nth-child(4) .artista-imagem {
+    background:
+        linear-gradient(125deg, #02040a, #315b91, #05070b);
+}
+
+.artista-imagem span {
+    font-family: 'Archivo Black';
+    font-size: 25px;
+}
+
+.artista-info {
+    padding: 20px;
+}
+
+.artista-info p {
+    font-size: 14px;
+}
+
+/* ================= HORÁRIOS ================= */
+
+.programacao {
+    border-top: 1px solid var(--borda);
+}
+
+.horario {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    border-bottom: 1px solid var(--borda);
+}
+
+.horario div {
+    padding: 20px;
+}
+
+.hora {
+    font-family: 'Archivo Black';
+    font-size: 22px;
+    color: var(--prata);
+}
+
+/* ================= INGRESSOS ================= */
+
+.ingressos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.ingresso {
+    border: 1px solid var(--borda);
+    padding: 35px;
+}
+
+.ingresso-destaque {
+    background: var(--azul);
+    border-color: var(--prata);
+}
+
+.preco {
+    font-family: 'Archivo Black';
+    font-size: 38px;
+    margin: 25px 0;
+}
+
+/* ================= INFORMAÇÕES ================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.mapa {
+    min-height: 400px;
+    border: 1px solid var(--borda);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(90deg, transparent 49%, rgba(255,255,255,.15) 50%, transparent 51%),
+        linear-gradient(0deg, transparent 49%, rgba(255,255,255,.15) 50%, transparent 51%),
+        #0a0e17;
+
+    background-size: 100px 100px;
+}
+
+.mapa span {
+    border: 2px solid white;
+    padding: 15px 25px;
+    font-weight: 800;
+}
+
+.lista {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.lista li {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--borda);
+    color: var(--cinza);
+}
+
+.aviso {
+    border-left: 3px solid white;
+    padding: 20px;
+    margin: 25px 0;
+    background: rgba(255,255,255,.05);
+}
+
+/* ================= FAQ ================= */
+
+.faq {
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+details {
+    border-top: 1px solid var(--borda);
+    padding: 25px 0;
+}
+
+details:last-child {
+    border-bottom: 1px solid var(--borda);
+}
+
+summary {
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+details p {
+    padding-top: 15px;
+}
+
+/* ================= FORMULÁRIO ================= */
+
+.formulario {
+    max-width: 650px;
+    margin-top: 40px;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 15px;
+
+    background: #090c13;
+    color: white;
+
+    border: 1px solid var(--borda);
+    outline: none;
+
+    font-family: 'Raleway';
+}
+
+.campo textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    border-top: 1px solid var(--borda);
+    padding: 35px 0;
+    color: var(--cinza);
+}
+
+.footer-conteudo {
+    width: min(1150px, 90%);
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .cards,
+    .artistas,
+    .ingressos,
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 65px 0;
+    }
+
+    .cards,
+    .artistas,
+    .ingressos,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-conteudo {
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .horario {
+        grid-template-columns: 80px 1fr;
+    }
+}

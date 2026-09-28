@@ -1,7 +1,7 @@
 # Festival Entrelinhas
 
 Dupla:Maria Clara Fernandes de Medeiros e Nícolas Mazaia Ezequiel
-**Site publicado:** npx plugins add vercel/vercel-plugin
+**Site publicado:** festival-entrelinhas.vercel.app
 
 ## Briefing
 idade do público: 18 a 25 anos, clima: noturno, confiante e autêntico, cores: Azul Marinho #000080, Branco  #FFFFFF , Preto #000000 e Prata  #C0C0C0, fonte 1 para títulos: <link rel="preconnect" href="https://fonts.googleapis.com">
